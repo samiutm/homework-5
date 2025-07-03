@@ -38,16 +38,12 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
     public void setCurrentUser(String name) {
         this.currentUser = name;
     }
-
     @Override
-    public String getCurrentUser() {
-        return this.currentUser;
-    }
+    public String getCurrentUser() {return this.currentUser;}
 
     @Override
     public void changePassword(User user) {
         // Replace the old entry with the new password
         users.put(user.getName(), user);
     }
-
 }
